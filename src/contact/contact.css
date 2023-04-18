@@ -20,7 +20,8 @@
 
 .contact-left-section {
     width: 45%;
-    height: 100vh !important;
+    height: auto;
+    min-height: 95vh;
     background-image: url('../../public/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +30,11 @@
 .slogan-div{
     position: relative;
     background-color: #09017791;
-    height: 100vh;
+    height: auto;
+    min-height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 #slogan-span{
@@ -41,14 +46,14 @@
     font-size: 45px;
     padding: 10px 35px;
     color: #ffffff !important;
-    position: relative;
-    top: 50% !important;
+    margin-bottom: 150px;
 }
 
 .contact-form {
     margin: auto auto !important;
     padding: 0px 5%;
-    height: 100vh;
+    height: auto;
+    min-height: 90vh;
     width: 60%;
 }
 .contact-form-header1{
