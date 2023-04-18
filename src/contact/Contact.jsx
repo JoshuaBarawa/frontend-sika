@@ -109,9 +109,9 @@ const Contact = () => {
                             </div>
 
                             <div className="contact-input-group">
-                                <select name='country' className='contact-input' defaultValue={'Kenya'}
+                                <select required name='country' className='contact-input' defaultValue={'Kenya'}
                                     onChange={(e) => handleOnChange(e)}>
-                                    <option selected disabled hidden value="" style={{color:'red'}}>Country</option>
+                                    <option selected disabled hidden value="" className="first-option">Country</option>
                                     {countries.map((country, id) =>
                                         <option id='option' key={id} style={{ fontSize: '14px' }} value={country.name.common}>{country.name.common}</option>
                                     )}
@@ -120,8 +120,8 @@ const Contact = () => {
                             </div>
 
                             <div className="contact-input-group">
-                                <select name='nationality' className='contact-input' onChange={(e) => handleOnChange(e)}>
-                                    <option selected disabled hidden value="">Nationality</option>
+                                <select required name='nationality' className='contact-input' onChange={(e) => handleOnChange(e)}>
+                                    <option selected disabled hidden value="" className="first-option">Nationality</option>
                                     {countries.map((country, id) =>
                                         <option id='option' key={id} style={{ fontSize: '14px' }} value={country.name.common}>{country.name.common}</option>
                                     )}
@@ -136,7 +136,7 @@ const Contact = () => {
                             </div>
 
                             <div className="contact-input-group">
-                                <select name='gender' className='contact-input' onChange={(e) => handleOnChange(e)}>
+                                <select required name='gender' className='contact-input' onChange={(e) => handleOnChange(e)}>
                                     <option selected disabled hidden value="">Gender</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
