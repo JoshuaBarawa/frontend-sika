@@ -8,6 +8,7 @@ const Contact = () => {
     const [countries, setCountries] = useState([])
     const [formErrors, setFormErrors] = useState()
 
+    // TODO: Create user info object
     const [user, setUser] = useState({
         fName: '',
         lName: '',
@@ -44,11 +45,9 @@ const Contact = () => {
         if (!user?.lName) {
             errors['lName'] = 'Last name is required!'
         }
-    
         if (!user?.country) {
             errors['country'] = 'Country is required!'
         }
-
         if (!user?.nationality) {
             errors['nationality'] = 'Nationality is required!'
         }
@@ -65,6 +64,13 @@ const Contact = () => {
         return errors
     };
 
+ // TODO: Create new object
+    const handleGetUserInfo = () => {
+        if(Object.keys(validateForm()).length === 0){
+            alert(JSON.stringify(user))
+        }
+     
+    }
 
     return (
         <div className="contact-page">
@@ -148,7 +154,7 @@ const Contact = () => {
                 
                     <div className='contact-form-actions'>
                         <button type='button' className="skip-btn">SKIP FOR NOW</button>
-                        <button type='button' className="next-btn" onClick={validateForm} >NEXT</button>
+                        <button type='button' className="next-btn" onClick={handleGetUserInfo} >NEXT</button>
                     </div>
                 </form>
 
