@@ -29,7 +29,7 @@
 .slogan-div{
     position: relative;
     background-color: #09017791;
-    height: 100%;
+    height: 100vh;
 }
 
 #slogan-span{
@@ -43,7 +43,6 @@
     color: #ffffff !important;
     position: relative;
     top: 50% !important;
-    height: 100vh !important;
 }
 
 .contact-form {

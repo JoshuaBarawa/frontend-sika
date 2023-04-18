@@ -111,7 +111,7 @@ const Contact = () => {
                             <div className="contact-input-group">
                                 <select name='country' className='contact-input' defaultValue={'Kenya'}
                                     onChange={(e) => handleOnChange(e)}>
-                                    <option selected disabled hidden value="">Country</option>
+                                    <option selected disabled hidden value="" style={{color:'red'}}>Country</option>
                                     {countries.map((country, id) =>
                                         <option id='option' key={id} style={{ fontSize: '14px' }} value={country.name.common}>{country.name.common}</option>
                                     )}
